@@ -1,51 +1,45 @@
--- Create the Student table
+SQL Create Tables code:
+
+CREATE TABLE Availability (
+    TutorID INT,
+    day varchar(255),
+    timeof INT, 
+    filled bool,
+    PRIMARY KEY (TutorID, day, timeof)
+    
+    
+); 
 CREATE TABLE Student (
     StudentID INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
     Email VARCHAR(255) NOT NULL,
-    Date DATE,
-    Time TIME,
+    Day VARCHAR(255),
+    timeof INT
     Location VARCHAR(255),
     Budget DECIMAL(10, 2),
-    DateOfBirth DATE,
-    Age INT,
     SchoolYear INT
-    FOREIGN KEY (Date) REFERENCES Availability(Date)
-    FOREIGN KEY (Time) REFERENCES Availability(Time)
+    
 );
 
--- Create the Tutor table
 CREATE TABLE Tutor (
     TutorID INT PRIMARY KEY,
-    Email VARCHAR(255) NOT NULL,
-    Location VARCHAR(255),
-    Cost DECIMAL(10, 2)
-    Date DATE,
-    Time TIME,
-    FOREIGN KEY (Date) REFERENCES Availability(Date)
-    FOREIGN KEY (Time) REFERENCES Availability(Time)
+    email VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL, 
+    cost DECIMAL(10, 2),
+    subject VARCHAR(255),
+    location VARCHAR(255)
 );
 
--- Create the TutorStudent (previous matches) table
 CREATE TABLE TutorStudent (
     TutorID INT,
     StudentID INT,
-    Subject VARCHAR(255),
-    FOREIGN KEY (TutorID) REFERENCES Tutor(TutorID),
-    FOREIGN KEY (StudentID) REFERENCES Student(StudentID)
+    subject VARCHAR(255),
+    day VARCHAR(255),
+    timeof INT,
+	PRIMARY KEY (TutorID, StudentID, subject, day, timeof)
 );
 
--- Create the Courses table
-CREATE TABLE Courses (
-    CourseID INT PRIMARY KEY,
-    CourseName VARCHAR(255),
-    Department VARCHAR(255),
-    CourseNumber INT
-);
 
--- Create the Availability table
-CREATE TABLE Availability (
-    TutorID INT,
-    Date DATE,
-    Time TIME,
-    FOREIGN KEY (TutorID) REFERENCES Tutor(TutorID)
-); 
+
+
+
