@@ -1,14 +1,13 @@
-SQL Create Tables code:
-
+--Availability table for all Tutors
 CREATE TABLE Availability (
     TutorID INT,
     day varchar(255),
     timeof INT, 
     filled bool,
     PRIMARY KEY (TutorID, day, timeof)
-    
-    
-); 
+);
+
+--Student table to store student data
 CREATE TABLE Student (
     StudentID INT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -18,9 +17,9 @@ CREATE TABLE Student (
     Location VARCHAR(255),
     Budget DECIMAL(10, 2),
     SchoolYear INT
-    
 );
 
+--Tutor table to store tutor data
 CREATE TABLE Tutor (
     TutorID INT PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
@@ -30,6 +29,7 @@ CREATE TABLE Tutor (
     location VARCHAR(255)
 );
 
+--Table to store registered course info
 CREATE TABLE TutorStudent (
     TutorID INT,
     StudentID INT,
@@ -38,8 +38,6 @@ CREATE TABLE TutorStudent (
     timeof INT,
 	PRIMARY KEY (TutorID, StudentID, subject, day, timeof)
 );
-
-
 
 
 
