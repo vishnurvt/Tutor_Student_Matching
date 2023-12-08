@@ -73,8 +73,6 @@ def teacherADD(id):
 def viewTutors(id):
     print("Type the subject you need tutoring for")
     subject = input()
-    # print("Type whether you want an online tutor or offline")
-    # location = input()
     sql = "SELECT budget FROM student WHERE studentid = %s"
     val = (id,)
     mycursor.execute(sql,val)
@@ -205,8 +203,3 @@ elif input1 == 'S':
             print("congrats! you have signed up for this tutor!")
     else:
         edit(id)
-
-
-
-        
-    
