@@ -15,10 +15,3 @@ To meet the expectations of educational institutions, the project aims to enhanc
 
 # ER Model
 ![image](https://github.com/vishnurvt/Tutor_Student_Matching/assets/135481873/ba0d9695-0da1-422d-9ed7-6696243b5c4f)
-
-# Implementing the ER Model
-- **Database Management System (DBMS):** MySQL served as the primary database management system for the Tutor-Student Matching Database Project. MySQL is an open-source relational database management system that provides a robust and scalable platform for storing and retrieving data.
-- **Integrated Development Environment (IDE):** Python with VS Code – Python, a versatile programming language, was used as the primary language for developing the platform. Its extensive library support and readability made it an ideal choice for implementing the backend functionalities of our EdTech system.
-- **Chart-Making Tool:** Lucid Charts: Lucid Charts, an online diagramming tool, played a crucial role in visualizing and designing the Entity-Relationship (ER) Model for the project. Its user-friendly interface and collaborative features facilitated the creation of a comprehensive ER Diagram, essential for database design.
-- **Version Control System:** GitHub served as the version control repository for the project, hosting the entire codebase. This platform enabled seamless collaboration among team members by providing version tracking, branching, and merging capabilities. GitHub ensured that the development process remained organized and that changes were systematically managed.
-- **Team Collaboration Platform:** Discord served as the central communication hub for the project team. The platform facilitated real-time communication, allowing team members to discuss project-related matters, share updates, and address challenges promptly.
