@@ -226,8 +226,3 @@ elif input1 == 'S': #Student side
             print("congrats! you have signed up for this tutor!")
     else:
         edit(id) #calls edit function for student to edit their profile
-
-
-
-        
-    
